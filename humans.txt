@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+Your title: Israel Díaz.                      
+Site: progbass@gmail.com http://www.icreate.io/                         
+Twitter: @progbass.                          
+Location: Mexico City, Mexico.
+
+
+# THANKS
+Name: Ingrid Ocana Illustrations
+	
+
+# TECHNOLOGY COLOPHON
+Standards: CSS3, HTML5
+Components: jQuery, Backbone.js, CreateJS, Normalize.css
+Last update: 2015/09     
+Software: Coda, Codekit , Adobe Suite 
+    
