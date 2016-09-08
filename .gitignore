@@ -1,0 +1,19 @@
+### BUILDS/TMP ###
+.tmp
+dist
+test
+
+
+### Bower ###
+bower_components
+app/bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+# Dependency directories
+node_modules
+
+# Sublime Project
+LaikasEscapeArcade.sublime-project
+LaikasEscapeArcade.sublime-workspace
