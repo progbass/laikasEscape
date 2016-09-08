@@ -56,8 +56,8 @@ define(['easel', 'tween', 'sound', 'preload'], function(){
 		life_max: 5,
 		lifes: 5,
 		
-		delay_min: 0,
-		delay_max: 260,
+		delay_min: 200,
+		delay_max: 600,
 		
 		
 		
@@ -177,7 +177,7 @@ define(['easel', 'tween', 'sound', 'preload'], function(){
 			
 			//animate
 			this.tween = new createjs.Tween(this.sprite)
-			.to({y: this.positions[this.hole].y, scaleX: this.dimensions[this.hole].xScale, scaleY: this.dimensions[this.hole].yScale}, 260, createjs.Ease.quartOut)
+			.to({y: this.positions[this.hole].y, scaleX: this.dimensions[this.hole].xScale, scaleY: this.dimensions[this.hole].yScale}, 180, createjs.Ease.quartOut)
 			.wait(  scope.getRandomInt( scope.delay_min, scope.delay_max ) )
 			.call(this.hide, null, this)
 		},
@@ -189,7 +189,7 @@ define(['easel', 'tween', 'sound', 'preload'], function(){
 			
 			//hide
 			this.tween = new createjs.Tween(this.sprite, {override:true})
-			.to({y: tempY }, 300, createjs.Ease.backIn).call(function(){
+			.to({y: tempY }, 200, createjs.Ease.backIn).call(function(){
 				//dispatch event
 				scope.removeAstronaut();
 			});

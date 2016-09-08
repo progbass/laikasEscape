@@ -119,8 +119,8 @@ define(['jquery', 'easel', 'tween', 'preload'], function($){
 		update: function(){
 			var scope = this;
 			
-			scope.astronaut_line.x += .6;
-			scope.enemy_line.x += .8;
+			scope.astronaut_line.x += .4;
+			scope.enemy_line.x += .5;
 			
 			this.icon_heroe.x = this.astronaut_line.x + this.width;
 			this.icon_enemy.x = this.enemy_line.x + this.width;
