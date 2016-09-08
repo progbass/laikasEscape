@@ -1,0 +1,215 @@
+html{
+	background: #cfdff3 url('../img/bg_stars.gif') repeat-x center top;
+	background-size: contain;
+	height: 100%;
+}
+
+
+body{
+	margin:0; padding: 0;
+	height: 100%;
+	
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 16px;
+	color: #FA8C14;
+	text-align: center;
+	
+	&:before{
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0; right: 0;
+		bottom: 0; top: 0;
+		width: 100%; height: 100%;
+		
+		-webkit-box-shadow: inset 0px 0px 130px rgba(0,0,0,0.5);
+		-moz-box-shadow:    inset 0px 0px 130px rgba(0,0,0,0.5);
+		box-shadow:         inset 0px 0px 130px rgba(0,0,0,0.5);
+	}
+}
+
+
+
+
+#main_holder{
+	position: relative;
+}
+
+
+
+////////// MOON BACKGROUND
+#moon_background{
+	position: absolute;
+	z-index: -1;
+	
+	width: 100%;
+	height: 100%;
+	
+	-webkit-filter: drop-shadow( 0 -5px 12px rgba(225,237,248,.8) );
+    filter: drop-shadow( 0 -5px 12px rgba(225,237,248,.8) ); /* Same syntax as box-shadow */
+	
+	background: transparent url('../img/bg_ambient.svg') no-repeat center top ;
+}
+
+
+////////// PRELOADER
+#progressbar {
+	left: 25%;
+	position: absolute;
+	text-align: center;
+	top: 12%;
+	right: 25%;
+	z-index: -1;
+  
+	//Preload bar
+	.bar {
+		box-shadow: #FA8C14 0 0 10px 1px;
+		-webkit-transition: all 300ms; /* Safari */
+		transition: all 300ms;
+		background-color: #FA8C14; 
+		top: 0;;
+		height: 1px;
+		display: inline-block;
+		width: 0%;
+	}
+}
+
+
+
+
+////////// CANVAS HOLDER / GAME CANVAS
+.canvas_holder{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: auto;
+	
+	background: url('../img/bg.svg') no-repeat center top;
+	background-size: contain;
+	
+	a.fullscreen{
+		position: absolute;
+		display: block;
+		bottom: 14px; right: 15px;
+		margin: auto;
+		width: 4.5%; height: 0;
+		padding-bottom: 4.5%;
+		
+		text-align: center;
+		text-indent: -9999em;
+		font-size: 1px;
+		color: #FA8C14;
+		background: url("../img/fullscreen.svg") no-repeat center top;
+		background-size: cover;
+		
+		
+		&.exit{
+			background-position: center bottom;
+		}
+	}
+}
+#game_canvas{
+	display: block;
+	z-index: 2
+}
+
+
+
+
+///////// DEVELOPER URI
+#developer{
+	position: absolute;
+	z-index: 10;
+	bottom: 1em;
+	left: 0; right: 0;
+	
+	font-family: Helvetica;
+	font-size: 0.75em;
+	color: #484f57;
+	
+	a{
+		color: #156c95;
+		text-decoration: none;
+		-webkit-transition: color 200ms;
+		-moz-transition: color 200ms;
+		-o-transition: color 200ms;
+		transition: color 200ms;
+		
+		&:hover{
+			color: lighten(#156c95, 15%);
+		}
+	}
+}
+
+
+
+
+
+///////// ROTATE DEVICE
+#warning {
+	display: none;
+	position: absolute;
+	width: 100%; height: 70%;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	margin: auto;
+	
+	font-size: 1.25em;
+	text-align: center;	
+	
+	
+	img{
+		display: block;
+		max-width: 100%;
+		margin: .5em auto 0;
+		height: auto !important;
+		
+		&.logo{
+			width: 70%;
+			margin: 0 auto 2em;
+		}
+		
+		&.icon{
+			width: 30%;
+		}
+
+	}
+}
+
+
+
+
+
+/*
+@media only screen and (max-width: 1280px){
+	html{
+		background-size: contain;
+	}	
+}
+*/
+@media only screen and (max-width: 768px) and (orientation:portrait){
+	html{
+		background-color: #05406b;
+		background-repeat: repeat;
+	}
+
+
+    #main_holder { display:none; }
+    #moon_background { display:none; }
+    #warning { display:block; }
+    
+}
+
+@media only screen and (max-width: 768px){
+	#developer{
+		font-size: 65%;
+	}
+    
+}
+@media only screen and (orientation:landscape){
+    #warning { display:none; }
+}
+    
+    
+
+
